@@ -2092,7 +2092,7 @@
                 <pose>-6 -4 0 0 0 3.14</pose>
              </waypoint>
              <waypoint>
-                <time>60.0</time>
+                <time>60.0</time>model
                 <pose>-6 -4 0 0 0 0</pose>
              </waypoint>
           </trajectory>
@@ -2186,7 +2186,7 @@
     -->
       
      <!-- An actor -->
-     <actor name="animated_box">
+     <model name="animated_box">
       <link name="link">
         <visual name="visual_box">
           <geometry>
@@ -2243,6 +2243,6 @@
          </waypoint>
        </trajectory>
      </script>
-    </actor>
+    </model>
   </world>
 </sdf>
