@@ -2013,7 +2013,7 @@
 
 
     <!--create moving objects -->
-
+    <!--
       <actor name="actor1">
       <link name='link'>
         <inertial>
@@ -2030,7 +2030,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>0.5 1.5 0.5</size>
+              <size>0.5 1.9 0.5</size>
             </box>
           </geometry>
         </collision>
@@ -2115,7 +2115,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>0.5 1.5 0.5</size>
+              <size>0.5 1.9 0.5</size>
             </box>
           </geometry>
         </collision>
@@ -2183,7 +2183,66 @@
           </trajectory>
         </script>
       </actor>
-
+    -->
       
+     <!-- An actor -->
+     <actor name="animated_box">
+      <link name="link">
+        <visual name="visual_box">
+          <geometry>
+            <box>
+              <size>.2 .2 .2</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <bounce/>
+          <friction>
+            <torsional>
+              <ode/>
+            </torsional>
+            <ode/>
+          </friction>
+        </surface>
+        <turnGravityOff>true</turnGravityOff>
+      </link>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="square">
+          <waypoint>
+            <time>0.0</time>
+            <pose>7 4 0.3 0 0 3.14</pose>
+         </waypoint>
+         <waypoint>
+            <time>45.0</time>
+            <pose>-6 4 0.3 0 0 3.14</pose>
+         </waypoint>
+         <waypoint>
+            <time>50</time>
+            <pose>-6 4 0.3 0 0 0</pose>
+         </waypoint>
+         <waypoint>
+            <time>75</time>
+            <pose>7 4 0.3 0 0 0</pose>
+         </waypoint>
+         <waypoint>
+            <time>80.0</time>
+            <pose>7 4 0.3 0 0 3.14</pose>
+         </waypoint>
+       </trajectory>
+     </script>
+    </actor>
   </world>
 </sdf>
